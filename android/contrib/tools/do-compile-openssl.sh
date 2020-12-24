@@ -35,7 +35,7 @@ fi
 
 
 FF_BUILD_ROOT=`pwd`
-FF_ANDROID_PLATFORM=android-9
+FF_ANDROID_PLATFORM=android-21
 
 
 FF_BUILD_NAME=
@@ -45,7 +45,7 @@ FF_CROSS_PREFIX=
 FF_CFG_FLAGS=
 FF_PLATFORM_CFG_FLAGS=
 
-FF_EXTRA_CFLAGS=
+FF_EXTRA_CFLAGS=" -fPIC "
 FF_EXTRA_LDFLAGS=
 
 
@@ -154,9 +154,9 @@ echo ""
 echo "--------------------"
 echo "[*] check openssl env"
 echo "--------------------"
-export PATH=$FF_TOOLCHAIN_PATH/bin:$PATH
+export PATH="$FF_TOOLCHAIN_PATH/bin:$PATH"
 
-export COMMON_FF_CFG_FLAGS=
+export COMMON_FF_CFG_FLAGS=" -fPIC "
 
 FF_CFG_FLAGS="$FF_CFG_FLAGS $COMMON_FF_CFG_FLAGS"
 
